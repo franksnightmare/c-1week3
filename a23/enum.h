@@ -11,7 +11,7 @@ enum Opcode
 enum OperandType
 {
 	SYNTAX, VALUE,
-	REGISTRY, MEMORY
+	REGISTER, MEMORY
 };
 
 enum RAM
