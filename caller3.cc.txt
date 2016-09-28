@@ -1,6 +1,0 @@
-#include "ex22.ih"
-
-void caller(Demo d&&)      
-{
-    d.run();
-}
