@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+
+\usepackage{times}
+\usepackage[english]{babel}
+
+% -----------------------------------------------
+% especially use this for you code
+% -----------------------------------------------
+
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{Gray}{gray}{0.95}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{language=C++,
+	basicstyle = \normalsize\ttfamily,   % the size and fonts that are used
+	tabsize = 4,                    % sets default tabsize
+	breaklines = true,              % sets automatic line breaking
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{mygreen}\ttfamily,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\lstdefinestyle{DOS}
+{
+    backgroundcolor=\color{black},
+    basicstyle=\normalsizel\color{white}\ttfamily
+}
+
+\begin{document}
+
+
+\title{Programming report \\
+       Week 2 Assignments C++
+}
+\date{\today}
+\author{Jaime Betancor Valado \\
+Christiaan Steenkist \\
+Remco Bos \\
+Diego Ribas Gomes
+}
+
+\maketitle
+
+\section*{Assignment 21, Key Concepts}
+
+\subsection*{Encapsulation and data hiding}
+Encapsulation: Is the act of putting together all the data and functions as a class.
+Data hiding: In the making of the encapsulation you can try to implement the data hiding, i.e., making private the data members to not be accesible for the user or other functions outside the class.
+\subsection*{Why are they important to design classes?}
+How you design the interface of the class (how it is seen by the user) it is important. Furthermore, making data only accesible by member functions prevents some design errors.
+\subsection*{Why only interface and not implementation?}
+To learn to use an object of a class you only need to learn how it is his interface declared. The user doesn't need to know how it is implemented, i.e., how it works, that is the beauty of the objects.
+
+\subsection*{Code Listings}
+\lstinputlisting[caption = \tt bignum.h]{src/a21/exercise21.cc}
+
+\section*{Assignment 22, Class member modifiers}
+We were tasked to "implement" a class with several overloaded members, each of them with specific tasks. The implementation is not required, only the declaration.
+
+\subsection*{Code Listings}
+\lstinputlisting[caption = \tt header.h]{src/a22/ex22.h}
+\lstinputlisting[caption = \tt inthead.ih]{src/a22/ex22.ih}
+\lstinputlisting[caption = \tt main.cc]{src/a22/ex22main.cc}
+\lstinputlisting[caption = \tt caller1.cc]{src/a22/caller1.cc}
+\lstinputlisting[caption = \tt caller2.cc]{src/a22/caller2.cc}
+\lstinputlisting[caption = \tt caller3.cc]{src/a22/caller3.cc}
+
+\section*{Assignment 23, CPU - MEMORY}
+This is the first of a series of exercises to design a CPU. In this one we are tasked to implement some enum elements from which all the classes will read and finally we need to implement the memory class.
+
+\subsection*{Code Listings}
+\lstinputlisting[caption = \tt enum.h]{src/a23/enum.h}
+\lstinputlisting[caption = \tt memory.h]{src/a23/memory/memory.h}
+\lstinputlisting[caption = \tt inhead.ih]{src/a23/memory/memory.ih}
+\lstinputlisting[caption = \tt load.cc]{src/a23/memory/load.cc}
+\lstinputlisting[caption = \tt constr1.cc]{src/a23/memory/memory1.cc}
+\lstinputlisting[caption = \tt constr2.cc]{src/a23/memory/memory2.cc}
+\lstinputlisting[caption = \tt store.cc]{src/a23/memory/store.cc}
+
+\section*{Assignment 24, CPU - CPU}
+This is the second of a series of exercises to design a CPU. In this one we are tasked to implement the cpu class and in addition, to define main and start the cpu.
+
+\subsection*{Code Listings}
+\lstinputlisting[caption = \tt cpu.h]{src/a24/cpu/cpu.h}
+\lstinputlisting[caption = \tt inthead.ih]{src/a24/cpu/cpu.ih}
+\lstinputlisting[caption = \tt main.cc]{src/a24/cpu/main.cc}
+\lstinputlisting[caption = \tt cpu.cc]{src/a24/cpu/cpu.cc}
+\lstinputlisting[caption = \tt error.cc]{src/a24/cpu/error.cc}
+\lstinputlisting[caption = \tt start.cc]{src/a24/cpu/start.cc}
+
+\section*{Assignment 25, CPU - TOKENIZER}
+This is the third of a series of exercises to design a CPU. In this one we are tasked to implement the tokenizer class.
+
+\subsection*{Code Listings}
+\lstinputlisting[caption = \tt tokenizer.h]{src/a25/tokenizer/tokenizer.h}
+\lstinputlisting[caption = \tt tokenizer.ih]{src/a25/tokenizer/tokenizer.ih}
+\lstinputlisting[caption = \tt opcode.cc]{src/a25/tokenizer/opcode.cc}
+\lstinputlisting[caption = \tt reset.cc]{src/a25/tokenizer/reset.cc}
+\lstinputlisting[caption = \tt token.cc]{src/a25/tokenizer/token.cc}
+\lstinputlisting[caption = \tt tokenizer1.cc]{src/a25/tokenizer/tokenizer1.cc}
+\lstinputlisting[caption = \tt value.cc]{src/a25/tokenizer/value.cc}
+
+\end{document}

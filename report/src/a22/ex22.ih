@@ -1,0 +1,5 @@
+#include "ex22.h"
+
+void caller(Demo &d);       // 1
+void caller(Demo const &d); // 2
+voic caller(Demo d&&);      // 3
