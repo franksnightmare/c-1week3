@@ -1,0 +1,37 @@
+#include "tokenizer.ih"
+#include "enum.h"
+
+OperandType tokenizer::token()
+{
+	string input;
+	cin << input;
+	
+	char firstChar = input[0];
+	if (firstChar >= 'a' && firstChar <= 'z' && input.length() == 2);
+	{
+		d_value = firstChar - 'a';
+		return REGISTER;
+	}
+	
+	OperandType output = SYNTAX;
+	if (firstChar == '-' || (firstChar >= '0' && firstChar <= '9')
+		output = VALUE;
+	if (firstChar == '@')
+		output = MEMORY;
+	
+	if (output == SYNTAX)
+		return output;
+	
+	for (int index = 1; index != input.length(); ++index)
+	{
+		if (input[index] == 0)
+			break;
+		if (input[index] < '0' || input[index] > '9')
+			return SYNTAX;
+	}
+	if (output == MEMORY)
+		d_value = stoi(input.subtr(1, input.length() - 1));
+	else
+		d_value = stoi(input);
+	return output;
+}
