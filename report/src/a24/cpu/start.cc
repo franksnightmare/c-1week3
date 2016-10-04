@@ -1,6 +1,6 @@
-#include "cpu.h"
+#include "cpu.ih"
 
-CPU::start()
+void CPU::start()
 {
 	while (true)
 	{
@@ -9,40 +9,31 @@ CPU::start()
 		{
 			case (ERR):
 				error();
-				Tokenizer.reset();
-				break;
+			break;
 			case (MOV):
 				mov();
-				Tokenizer.reset();
-				break;
+			break;
 			case (ADD):
 				add();
-				Tokenizer.reset();
-				break;
+			break;
 			case (SUB):
 				sub();
-				Tokenizer.reset();
-				break;
+			break;
 			case (MUL):
 				mul();
-				Tokenizer.reset();
-				break;
+			break;
 			case (DIV):
 				div();
-				Tokenizer.reset();
-				break;
+			break;
 			case (NEG):
 				neg();
-				Tokenizer.reset();
-				break;
+			break;
 			case (DSP):
 				dsp();
-				Tokenizer.reset();
-				break;
-			case (STOP)
+			break;
+			case (STOP):
 				stop();
-				Tokenizer.reset();
-				break;			
+			break;			
 		}
 		Tokenizer.reset();
 	}

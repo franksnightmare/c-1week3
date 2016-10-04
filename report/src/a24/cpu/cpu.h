@@ -1,7 +1,13 @@
 #ifndef EX24_H_
 #define EX24_H_
 
-#include "enum.h"
+#include "../memory/memory.h"
+#include "../enum.h"
+
+enum registers
+{
+	NREGISTERS = 5
+};
 
 class CPU
 {	
@@ -9,9 +15,8 @@ class CPU
 	{
 		OperandType type;
 		int value;
-	}
+	};
 	
-	int const d_NREGISTERS = 5;
 	char d_REGISTER[NREGISTERS];
 	Memory d_memory;
 	

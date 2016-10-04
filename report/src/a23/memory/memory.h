@@ -1,5 +1,5 @@
-#ifndef INCLUDED_MEMORY_H
-#define INCLUDED_MEMORY_H
+#ifndef INCLUDED_MEMORY_H_
+#define INCLUDED_MEMORY_H_
 
 #include <iostream>
 #include "../enum.h"

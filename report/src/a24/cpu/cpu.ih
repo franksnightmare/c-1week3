@@ -1,3 +1,6 @@
+#include "cpu.h"
 #include <iostream>
+#include "../enum.h"
+#include "../tokenizer/tokenizer.h"
 
 using namespace std;
