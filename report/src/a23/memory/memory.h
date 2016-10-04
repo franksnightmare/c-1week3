@@ -1,23 +1,27 @@
-#ifndef INCLUDED_MEMORY_H_
-#define INCLUDED_MEMORY_H_
+#ifndef INCLUDED_MEMORY_H
+#define INCLUDED_MEMORY_H
 
 #include <iostream>
+#include "../enum.h"
+
+struct Data
+{
+	signed int d_values[RAM::SIZE];
+};
 
 class Memory
 {
 	private:
-		size_t const s_SIZE = 20;
-		
-		unsigned int d_values[];
+		size_t const s_SIZE = RAM::SIZE;
+		Data data;
 	
 	public:
 		Memory();
-		Memory(unsigned int values[]);
 		
 		void store(size_t address, 
-			unsigned int value);
+			signed int value);
 		
-		unsigned int const load(size_t address) const;
+		signed int load(size_t address) const;
 };
 
 #endif

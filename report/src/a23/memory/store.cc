@@ -1,8 +1,8 @@
 #include "memory.ih"
 
 void Memory::store(size_t address, 
-	unsigned int value);
+	int value)
 {
-	if (address >= 0 && address < SIZE)
-		d_values[address] = value;
+	if (address < SIZE)
+		data.d_values[address] = value;
 }

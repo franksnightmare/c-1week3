@@ -24,6 +24,7 @@ enum OperandType
 
 enum RAM
 {
+	UNDEFINED = 0,
 	SIZE = 20
 };
 

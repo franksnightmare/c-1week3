@@ -1,7 +1,10 @@
 #include "memory.ih"
 
 Memory::Memory()
-:
-	Memory::Memory(unsigned int values[] {UNDEFINED})
+//:
 {
+	for (size_t index = 0; index != s_SIZE; ++index)
+	{
+		store(index, UNDEFINED);
+	}
 }
