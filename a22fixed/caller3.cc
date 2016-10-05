@@ -2,5 +2,5 @@
 
 void caller(Demo&& demo)
 {
-    demo.run();
+    Demo().run();
 }
