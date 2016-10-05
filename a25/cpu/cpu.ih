@@ -1,0 +1,7 @@
+#include <iostream>
+#include "cpu.h"
+#include "../memory/memory.h"
+#include "../enums/enums.h"
+#include "../tokenizer/tokenizer.h"
+
+using namespace std;

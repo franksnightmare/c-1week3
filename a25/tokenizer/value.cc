@@ -1,6 +1,6 @@
 #include "tokenizer.ih"
 
-int tokenizer::value()
+int Tokenizer::value()
 {
 	return d_value;
 }

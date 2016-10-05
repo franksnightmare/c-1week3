@@ -1,24 +1,23 @@
 #include "tokenizer.ih"
-#include "enum.h"
+#include "../enums/enums.h"
 
-OperandType tokenizer::token()
+OperandType Tokenizer::token()
 {
 	string input;
-	cin << input;
+	cin >> input;
 	
 	char firstChar = input[0];
-	if (firstChar >= 'a' && firstChar <= 'z' && input.length() == 2);
+	if (firstChar >= 'a' && firstChar <= 'z' && input.length() == 2)
 	{
 		d_value = firstChar - 'a';
 		return REGISTER;
 	}
 	
 	OperandType output = SYNTAX;
-	if (firstChar == '-' || (firstChar >= '0' && firstChar <= '9')
+	if (firstChar == '-' || (firstChar >= '0' && firstChar <= '9'))
 		output = VALUE;
 	if (firstChar == '@')
 		output = MEMORY;
-	
 	if (output == SYNTAX)
 		return output;
 	
@@ -30,7 +29,10 @@ OperandType tokenizer::token()
 			return SYNTAX;
 	}
 	if (output == MEMORY)
-		d_value = stoi(input.subtr(1, input.length() - 1));
+	{
+		string address = input.substr(1, input.length() - 1);
+		d_value = stoi(address);
+	}	
 	else
 		d_value = stoi(input);
 	return output;

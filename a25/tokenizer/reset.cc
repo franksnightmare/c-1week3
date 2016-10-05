@@ -1,6 +1,6 @@
 #include "tokenizer.ih"
 
-void tokenizer::reset()
+void Tokenizer::reset()
 {
 	cin.clear();
 	

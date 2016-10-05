@@ -1,21 +1,19 @@
-#ifndef INCLUDED_TOKENIZER_
-#define INCLUDED_TOKENIZER_
+#ifndef TOKENIZER_H_
+#define TOKENIZER_H_
 
-#include "enum.h"
+#include "../enums/enums.h"
 
-class tokenizer
+class Tokenizer
 {
+	Tokenizer();
+	static int d_value;
 
     public:
 
-	void reset();
-	int value();
-    	Opcode opcode();
-    	OperandType token();	
-
-    private:
-
-	int d_value;
+	static void reset();
+	static int value();
+	static Opcode opcode();
+	static OperandType token();	
 
 };
         
