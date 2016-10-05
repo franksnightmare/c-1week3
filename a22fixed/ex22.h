@@ -4,9 +4,9 @@
 class Demo
 {
     public:
-        void run() &;
-	    void run() const &;
-	    void run() &&;
+        void run() &; // 1
+	void run() const &; // 2
+	void run() &&; // 3
 };
 
 #endif
