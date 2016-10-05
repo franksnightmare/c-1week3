@@ -1,0 +1,8 @@
+#include "ex22.h"
+#include <iostream>
+
+using namespace std;
+
+void caller(Demo &demo);       // 1
+void caller(Demo const &demo); // 2
+void caller(Demo&& demo);      // 3
