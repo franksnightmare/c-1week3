@@ -4,8 +4,7 @@
 class Demo
 {
 	public:
-		Demo();
-		void run();       // 1
+		void run(); &      // 1
 		void run() const; // 2
 		void run() &&;    // 3
 };
